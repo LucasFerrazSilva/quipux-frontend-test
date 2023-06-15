@@ -15,6 +15,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .main-card mat-card-content {
+    margin-top: 10px;
     padding: 0px !important;
 }
 

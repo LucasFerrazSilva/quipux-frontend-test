@@ -30,6 +30,13 @@ export class ListsService {
     return req;
   }
 
+  create(playlist: Playlist) {
+    const headers = this.buildHeadersWithToken();
+    const req = this.http.post(`http://localhost:8080/lists`, playlist, {headers}).pipe(catchError(error => this.handleError(error)));
+
+    return req;
+  }
+
   private buildHeadersWithToken() {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);

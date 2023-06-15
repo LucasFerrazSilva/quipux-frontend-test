@@ -1,0 +1,30 @@
+<div class="breadcrumb">
+    <a mat-button color="primary" routerLink="/">Playlists</a> / <a mat-button disabled>Adicionar Playlist</a>
+</div>
+
+
+<mat-card class="main-card">
+    <mat-card-title>Adicionar Playlist</mat-card-title>
+    <mat-card-content>
+
+        <div class="errors" *ngIf="errors.length > 0">
+            <div *ngFor="let error of errors"><strong>{{error.field}}</strong>: {{error.message}}</div>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div>                
+                <mat-form-field appearance="outline">
+                    <mat-label>Nome</mat-label>
+                    <input matInput formControlName="nome">
+                </mat-form-field>
+            </div>
+            <div> 
+                <mat-form-field appearance="outline">
+                    <mat-label>Descrição</mat-label>
+                    <input matInput formControlName="descricao">
+                </mat-form-field>
+            </div>
+
+            <button mat-flat-button class="button" color="primary" type="submit">Adicionar</button>
+        </form>
+    </mat-card-content>
+</mat-card>

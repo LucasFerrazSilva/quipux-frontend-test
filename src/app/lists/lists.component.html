@@ -5,6 +5,8 @@
 <mat-card class="main-card">
     <mat-card-title>Playlists</mat-card-title>
     <mat-card-content>
+        <a mat-flat-button color="primary" routerLink="/new-playlist">Adicionar</a>
+
         <table mat-table [dataSource]="playlists">
             <ng-container matColumnDef="nome">
                 <th mat-header-cell *matHeaderCellDef>Nome</th>

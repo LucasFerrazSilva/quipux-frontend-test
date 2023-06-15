@@ -1,0 +1,25 @@
+.main-card, .breadcrumb {
+    width: fit-content;
+    min-width: 400px;
+    margin: 20px auto;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}
+
+.errors {
+    margin-bottom: 10px;
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.errors h4 {
+    margin: 0;
+}
