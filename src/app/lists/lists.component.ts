@@ -10,6 +10,7 @@ import { Playlist } from './Playlist';
 export class ListsComponent {
 
   playlists: Playlist[] = [];
+  displayedColumns = ['nome', 'descricao', 'acoes'];
 
   constructor(private service: ListsService) {}
 
@@ -19,6 +20,10 @@ export class ListsComponent {
 
   getHeroes() {
     this.service.listPlaylist().subscribe(data => this.playlists = data);
+  }
+
+  onSelect(playlist: Playlist) {
+    console.log(playlist);
   }
 
 }

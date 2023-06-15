@@ -1,7 +1,16 @@
-.card {
-    background-color: #fdfdfd;
+.main-card {
     margin: 20px 10%;
     padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 2px 1px #aaa;
+}
+
+.mat-column-nome {
+    width: 20%;
+}
+
+.mat-column-descricao {
+    width: 60%;
+}
+
+.mat-column-acoes {
+    width: 20%;
 }
