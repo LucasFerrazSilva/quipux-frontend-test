@@ -4,11 +4,11 @@
     margin: 20px auto;
 }
 
-mat-form-field {
+.full-width {
     width: 100%;
 }
 
-button {
+.submit-form-button {
     width: 100%;
 }
 
@@ -22,4 +22,20 @@ button {
 
 .errors h4 {
     margin: 0;
+}
+
+.musicas {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.musica {
+    display: flex;
+    gap: 10px;
+}
+
+.remove-musica-button {
+    margin-top: 10px;
 }
