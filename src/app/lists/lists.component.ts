@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { ListsService } from './lists.service';
 import { Playlist } from './Playlist';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-lists',
   templateUrl: './lists.component.html',
-  styleUrls: ['./lists.component.css']
+  styleUrls: ['./lists.component.css'],
+  providers: [AuthService]
 })
 export class ListsComponent {
 
@@ -20,6 +22,10 @@ export class ListsComponent {
 
   getHeroes() {
     this.service.listPlaylist().subscribe(data => this.playlists = data);
+  }
+
+  onDelete(playlist: Playlist) {
+    this.service.delete(playlist.nome).subscribe(() => this.getHeroes());
   }
 
 }

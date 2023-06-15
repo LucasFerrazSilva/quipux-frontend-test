@@ -20,7 +20,7 @@
                     <a mat-icon-button color="primary" matTooltip="Ver Músicas" routerLink="/lists/{{element.nome}}">
                         <mat-icon>library_music</mat-icon>
                     </a>
-                    <button mat-icon-button color="warn" matTooltip="Remover">
+                    <button mat-icon-button color="warn" matTooltip="Remover" (click)="onDelete(element)">
                         <mat-icon>delete</mat-icon>
                     </button>
                 </td>

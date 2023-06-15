@@ -10,6 +10,7 @@ import { Playlist } from '../Playlist';
 })
 export class PlaylistDescriptionComponent {
 
+  nome: string | undefined;
   playlist: Playlist | undefined;
   displayedColumns = ['titulo', 'artista', 'album', 'ano', 'genero'];
   
@@ -20,8 +21,8 @@ export class PlaylistDescriptionComponent {
   }
 
   getPlaylistDescription() {
-    const nome = this.route.snapshot.paramMap.get('nome');
-    this.service.getPlaylistDescription(nome).subscribe(data => this.playlist = data);
+    this.nome = this.route.snapshot.paramMap.get('nome') || undefined;
+    this.service.getPlaylistDescription(this.nome).subscribe(data => this.playlist = data);
   }
 
 }
