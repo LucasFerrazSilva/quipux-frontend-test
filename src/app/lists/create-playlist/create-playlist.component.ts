@@ -54,11 +54,11 @@ export class CreatePlaylistComponent {
 
   addMusica() {
     const songForm = this.formBuilder.group({
-      titulo: [''],
-      artista: [''],
-      album: [''],
-      ano: [''],
-      genero: ['']
+      titulo: ['', Validators.required],
+      artista: ['', Validators.required],
+      album: ['', Validators.required],
+      ano: ['', Validators.required],
+      genero: ['', Validators.required]
     });
 
     this.musicas.push(songForm);

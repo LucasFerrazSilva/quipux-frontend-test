@@ -1,23 +1,18 @@
-.main-card, .breadcrumb {
-    width: fit-content;
-    min-width: 400px;
-    margin: 20px auto;
-}
-
-.full-width {
+mat-form-field {
     width: 100%;
 }
 
 .submit-form-button {
     width: 100%;
+    margin-top: 20px;
 }
 
 .errors {
     margin-bottom: 10px;
-    background-color: #f44336;
-    color: white;
+    color: #f44336;
     padding: 10px;
     border-radius: 5px;
+    text-align: center;
 }
 
 .errors h4 {
@@ -32,8 +27,10 @@
 }
 
 .musica {
+    width: 100%;
     display: flex;
     gap: 10px;
+    justify-content: space-between;
 }
 
 .remove-musica-button {
