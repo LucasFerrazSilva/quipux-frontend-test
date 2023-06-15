@@ -22,8 +22,4 @@ export class ListsComponent {
     this.service.listPlaylist().subscribe(data => this.playlists = data);
   }
 
-  onSelect(playlist: Playlist) {
-    console.log(playlist);
-  }
-
 }

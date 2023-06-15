@@ -8,3 +8,16 @@ body {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.main-card {
+    margin: 20px 10%;
+    padding: 20px;
+}
+
+.main-card mat-card-content {
+    padding: 0px !important;
+}
+
+.breadcrumb {
+    margin: 20px 10%;
+}

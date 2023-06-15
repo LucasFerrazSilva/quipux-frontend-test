@@ -14,6 +14,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ListsComponent } from './lists/lists.component';
 import { AuthComponent } from './auth/auth.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PlaylistDescriptionComponent } from './lists/playlist-description/playlist-description.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     ToolbarComponent,
     ListsComponent,
-    AuthComponent
+    AuthComponent,
+    PlaylistDescriptionComponent
   ],
   imports: [
     BrowserModule,

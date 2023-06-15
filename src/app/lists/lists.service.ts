@@ -17,4 +17,11 @@ export class ListsService {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.get<Playlist[]>("http://localhost:8080/lists", {headers});
   }
+
+  getPlaylistDescription(nome: string | null): Observable<Playlist> {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.get<Playlist>(`http://localhost:8080/lists/${nome}`, {headers});
+  }
+
 }
